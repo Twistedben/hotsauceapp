@@ -1,0 +1,37 @@
+
+.Header{
+    margin: 0 40px 0 40px; 
+    padding: 0;
+    text-align: center;
+    
+    --x: 50%;
+	--y: 50%;
+	
+	position: relative;
+	appearance: none;
+	padding: 1em 2em;
+	color: white;
+	cursor: default;
+	outline: none;
+	/* border-radius: 50px; */
+	
+
+	border: 2px solid transparent;
+	background: linear-gradient(rgb(61, 45, 43), rgb(17, 14, 14)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+}
+.headerName{
+    /* Positions */
+    text-align: center;
+    /* Size  */
+
+    /* Colors */
+    color: rgb(251, 8, 8)
+}
+.mainHeaderBtns{
+      /* Positions */
+      text-align: center;
+      /* Size  */
+  
+      /* Colors */
+      color: rgb(255, 2, 44)
+}

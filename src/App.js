@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header'
 
 class App extends React.Component {
 
@@ -6,7 +7,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="testing">
-                <div>Hot Sauce app</div>
+                <Header />
             </div>
         )
     }
