@@ -1,7 +1,8 @@
 
 .Header{
     margin: 0 40px 0 40px; 
-    padding: 0;
+    padding-bottom: 5px;
+    padding-bottom: 5px;
     text-align: center;
     
     --x: 50%;
@@ -9,7 +10,7 @@
 	
 	position: relative;
 	appearance: none;
-	padding: 1em 2em;
+	/* padding: 1em 2em; */
 	color: white;
 	cursor: default;
 	outline: none;
@@ -22,6 +23,8 @@
 .headerName{
     /* Positions */
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
     /* Size  */
 
     /* Colors */
