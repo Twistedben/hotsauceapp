@@ -1,15 +1,20 @@
 
 .Header{
-    margin: 0 10% 0 10%; 
-    padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 0 40px 0 40px; 
+    /* padding-bottom: 5px;
+    padding-bottom: 5px; */
+    /* align-items: flex-start; */
+    /* text-align: center; */
     
     --x: 50%;
 	--y: 50%;
 	
 	position: relative;
 	appearance: none;
-	padding: 1em 2em;
+	/* padding: 1em 2em; */
 	color: white;
 	cursor: default;
 	outline: none;
@@ -19,19 +24,125 @@
 	border: 2px solid transparent;
 	background: linear-gradient(rgb(61, 45, 43), rgb(17, 14, 14)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
+.Header :nth-child(1) { order: 2; }
+.Header :nth-child(2) { order: 1; }
+
 .headerName{
     /* Positions */
-    text-align: center;
+    
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    margin-left: 5%;
+    font-size: 40px;
+    /* display: flex; */
+    /* align-self: center; */
+   
     /* Size  */
 
     /* Colors */
-    color: rgb(251, 8, 8)
+
+    color: rgb(206, 251, 8)
 }
-.mainHeaderBtns{
-      /* Positions */
-      text-align: center;
-      /* Size  */
+
+
+/* When the browser is at least 600px and above */
+@media screen and (min-width: 600px) {
+    .Header{
+        /* justify-content: space-around; */
+        display: flex;
+        align-self: space-evenly;
+    }
+    .headerName{
+        display: flex;
+        /* justify-self: center; */
+
+    }
+    .dropbtn {
+        flex-wrap: wrap;
+        display: none;
+        position: absolute;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .Header{
+        margin: 0px 0px 0px 0px;
+        /* align-self: space-evenly; */
+        justify-content: space-between;
+    }
+    .btnsOnHeader{
+        display: none;
+    }
+    .headerName{
+        font-size: 25px;
+        align-self: flex-end;
+        margin-top: 0px;
+        margin-right: 5%;
+
+    }
+    .dropDown{
+        display: flex;
+        align-self: flex-end;
+        margin-top: 0%;
+    }
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        /* align-self: flex-end; */
+    }
+  }
+  /* Dropdown Button */
+  /* .dropDown{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 30%;
+}
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+} */
   
-      /* Colors */
-      color: rgb(255, 2, 44)
-}
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+  
