@@ -12,9 +12,9 @@ class Header extends React.Component {
                 <div className="headerName">Sauce</div>
                 <nav className="dropDown" role="select">
                     <div className="btnsOnHeader">
-                        <button><a href="#">Link 1</a></button>
-                        <button><a href="#">Link 1</a></button>
-                        <button><a href="#">Link 1</a></button>
+                        <button id="homeBtn"><a href="#">Home</a></button>
+                        <button id="hsDir"><a href="#">HS Directory</a></button>
+                        <button id="contactUs"><a href="#">Contact Us</a></button>
                     </div>
                     <div className="dropDown">
                         <button className="dropbtn">Drop</button>

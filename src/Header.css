@@ -1,7 +1,7 @@
 
 .Header{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 30px 0 30px; 
@@ -20,6 +20,9 @@
 .Header :nth-child(1) { order: 2; }
 .Header :nth-child(2) { order: 1; }
 
+.btnsOnHeader :nth-child(1) { order:1}
+.btnsOnHeader :nth-child(2) { order:2}
+.btnsOnHeader :nth-child(3) { order:3}
 
 .headerName{
     /* Positions */
@@ -28,34 +31,9 @@
     color: rgb(206, 251, 8)
 }
 
-
-form {
-    /* This bit sets up the horizontal layout */
-    display:flex;
-    flex-direction:row;
-    align-self: flex-end;
-    /* This bit draws the box around it */
-    border:1px solid grey;
-    /* I've used padding so you can see the edges of the elements. */
-    padding:2px;
-  }
-  input {
-    /* Tell the input to use all the available space */
-    display: flex;
-    flex-grow:1;
-    /* And hide the input's outline, so the form looks like the outline */
-    border:none;
-    width: 40%
- }
-  input:focus {
-    /* removing the input focus blue box. Put this on the form if you like. */
-    outline: none;
-  }
-
-  button {
-    /* Just a little styling to make it pretty */
-    display: flex;
-    border:1px solid blue;
+#homeBtn, #hsDir, #contactUs {
+    margin: 1%;
+    border:1px solid White;
     background:blue;
     color:white;
   }
@@ -70,14 +48,20 @@ form {
     }
     .headerName{
         display: flex;
-        
+        align-self: flex-end;
         /* justify-self: center; */
    }
 
    .btnsOnHeader{
     display: flex;
     flex-flow: row wrap;
-    /* align-items: stretch; */
+    justify-content: flex-start;
+    align-items: stretch;
+    }
+    #homeBtn{
+        display: flex;
+        align-self: stretch;
+        height: 100%;
     }
 
     .dropbtn {
