@@ -3,77 +3,100 @@
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    margin: 0 40px 0 40px; 
-    /* padding-bottom: 5px;
-    padding-bottom: 5px; */
-    /* align-items: flex-start; */
-    /* text-align: center; */
-    
+    justify-content: space-between;
+    margin: 0 30px 0 30px; 
     --x: 50%;
 	--y: 50%;
 	
 	position: relative;
 	appearance: none;
-	/* padding: 1em 2em; */
 	color: white;
 	cursor: default;
 	outline: none;
 	/* border-radius: 50px; */
-	
-
 	border: 2px solid transparent;
 	background: linear-gradient(rgb(61, 45, 43), rgb(17, 14, 14)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
 .Header :nth-child(1) { order: 2; }
 .Header :nth-child(2) { order: 1; }
 
+
 .headerName{
     /* Positions */
-    
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
-    margin-left: 5%;
-    font-size: 40px;
-    /* display: flex; */
-    /* align-self: center; */
-   
-    /* Size  */
-
-    /* Colors */
-
+    margin-left: 1%;
+    font-size: 30px;
     color: rgb(206, 251, 8)
 }
 
 
+form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    align-self: flex-end;
+    /* This bit draws the box around it */
+    border:1px solid grey;
+    /* I've used padding so you can see the edges of the elements. */
+    padding:2px;
+  }
+  input {
+    /* Tell the input to use all the available space */
+    display: flex;
+    flex-grow:1;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+    width: 40%
+ }
+  input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+
+  button {
+    /* Just a little styling to make it pretty */
+    display: flex;
+    border:1px solid blue;
+    background:blue;
+    color:white;
+  }
+
 /* When the browser is at least 600px and above */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
     .Header{
         /* justify-content: space-around; */
         display: flex;
-        align-self: space-evenly;
+        
+        justify-content: space-between;
     }
     .headerName{
         display: flex;
+        
         /* justify-self: center; */
+   }
 
+   .btnsOnHeader{
+    display: flex;
+    flex-flow: row wrap;
+    /* align-items: stretch; */
     }
+
     .dropbtn {
         flex-wrap: wrap;
         display: none;
         position: absolute;
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 399px) {
     .Header{
         margin: 0px 0px 0px 0px;
         /* align-self: space-evenly; */
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
     .btnsOnHeader{
         display: none;
     }
     .headerName{
-        font-size: 25px;
+        font-size: 20px;
         align-self: flex-end;
         margin-top: 0px;
         margin-right: 5%;
@@ -88,61 +111,16 @@
         background-color: #3498DB;
         color: white;
         padding: 5px;
-        font-size: 16px;
+        font-size: 15px;
         border: none;
         cursor: pointer;
         /* align-self: flex-end; */
     }
   }
-  /* Dropdown Button */
-  /* .dropDown{
-    display: flex;
-    align-self: flex-end;
-    margin-top: 30%;
-}
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    align-self: flex-end;
-} */
   
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
+ 
   
   /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
   
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
   
