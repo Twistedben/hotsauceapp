@@ -4,7 +4,7 @@
     /* flex-direction: row; */
     flex-flow: row wrap;
     justify-content: space-between;
-    margin: 0 30px 0 30px; 
+    margin: 10px 30px 0 30px; 
     --x: 50%;
 	--y: 50%;
 	
@@ -23,6 +23,7 @@
 .btnsOnHeader :nth-child(1) { order:1}
 .btnsOnHeader :nth-child(2) { order:2}
 .btnsOnHeader :nth-child(3) { order:3}
+.btnsOnHeader :nth-child(4) { order:4}
 
 .headerName{
     /* Positions */
@@ -31,7 +32,7 @@
     color: rgb(206, 251, 8)
 }
 
-#homeBtn, #hsDir, #contactUs {
+#homeBtn, #hsDirBtn, #contactUsBtn, #profileBtn  {
     margin: 1%;
     border:1px solid White;
     background:blue;
@@ -54,22 +55,23 @@
 
    .btnsOnHeader{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: stretch;
     }
-    #homeBtn{
+    /* #homeBtn{
         display: flex;
         align-self: stretch;
         height: 100%;
-    }
+    } */
 
-    .dropbtn {
+    .dropMenuBtn {
         flex-wrap: wrap;
         display: none;
         position: absolute;
     }
   }
+
   @media screen and (max-width: 399px) {
     .Header{
         margin: 0px 0px 0px 0px;
@@ -91,7 +93,7 @@
         align-self: flex-end;
         margin-top: 0%;
     }
-    .dropbtn {
+    .dropMenuBtn {
         background-color: #3498DB;
         color: white;
         padding: 5px;
