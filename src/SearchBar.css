@@ -21,11 +21,3 @@ form {
     outline: none;
   }
 
-  button {
-    /* Just a little styling to make it pretty */
-    /* display: flex;
-    flex-flow: row wrap; */
-    border:1px solid blue;
-    background:blue;
-    color:white;
-  }

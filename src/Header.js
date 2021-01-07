@@ -50,21 +50,21 @@ class Header extends React.Component {
                         <button id="profileBtn"><a href="/#">Profile</a></button>
                         <button id="contactUsBtn"><a href="/#">Contact Us</a></button>
                     </div>
-                    <div className="dropMenuBtn">
-                        <button onClick={this.showMenu}>showMenu</button>
+                    <div className="btnsOnMenuBtn">
+                        <button id="dropMenuBtn" onClick={this.showMenu}>showMenu</button>
 
                         {
                             this.state.showMenu
                                 ? (
-                                    <div className="btnsOnDropDown"
+                                    <div className="grid gride-cols-3 btnsOnDrpDwn"
                                         ref={(element) => {
                                             this.dropdownMenu = element;
                                         }}
                                     >
-                                        <button id="dropDownHome"><a href="/#">Home</a></button>
-                                        <button id="dropDownHsDir"><a href="/#">HS Directory</a></button>
-                                        <button id="dropDownProfile"><a href="/#">Profile</a></button>
-                                        <button id="dropDownContact"><a href="/#">Contact Us</a></button>
+                                        <button className="drpDwnBtns" id="dropDownHome"><a href="/#">Home</a></button>
+                                        <button className="drpDwnBtns" id="dropDownHsDir"><a href="/#">HS Directory</a></button>
+                                        <button className="drpDwnBtns" id="dropDownProfile"><a href="/#">Profile</a></button>
+                                        <button className="drpDwnBtns" id="dropDownContact"><a href="/#">Contact Us</a></button>
                                     </div>
                                 ) : (
                                     null
