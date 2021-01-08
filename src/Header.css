@@ -20,6 +20,7 @@
 .Header :nth-child(1) { order: 2; }
 .Header :nth-child(2) { order: 1; }
 
+
 .btnsOnHeader :nth-child(1) { order:1}
 .btnsOnHeader :nth-child(2) { order:2}
 .btnsOnHeader :nth-child(3) { order:3}
@@ -34,14 +35,14 @@
 
 #homeBtn, #hsDirBtn, #contactUsBtn, #profileBtn  {
     margin: 1%;
-    border:1px solid White;
+    /* border:1px solid White; */
     /* background-color:blue; */
     background-color: rgb(255, 0, 43);
     color:white;
   }
 
 /* When the browser is at least 600px and above */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 600px) {
     .Header{
         /* justify-content: space-around; */
         display: flex;
@@ -73,7 +74,7 @@
     }
   }
 
-  @media screen and (max-width: 399px) {
+  @media screen and (max-width: 599px) {
     .Header{
         z-index: 1;
         margin: 0px 0px 0px 0px;
@@ -84,23 +85,39 @@
         display: none;
     }
     .headerName{
+        display: flex;
+        flex-direction: column;
         font-size: 20px;
-        align-self: flex-end;
+        justify-content: flex-start;
         margin-top: 0px;
         margin-right: 5%;
-
     }
+
+    /* .hotOnHeader{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        font-size: 20px;
+        align-self: flex-end;
+    }
+    .sauceOnHeader{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        align-self: flex-end;
+    } */
     .dropDown{
         display: flex;
         align-self: flex-end;
         margin-top: 0%;
         z-index: 2;
     }
-    .btnsOnMenuBtn,.dropMenuBtn button {
+    .dropMenuBtn button {
 
-        background-color: #3498DB;
+        background-color: black;
+        margin: 0px;
         color: white;
-        padding: 5px;
+        /* padding: 5px; */
         font-size: 15px;
         border: none;
         cursor: pointer;
@@ -114,6 +131,9 @@
     .drpDwnBtns{
         background-color: rgb(255, 0, 43);
         border:1px solid White;
+    }
+    .btnPepper{
+        color: black;
     }
   }
   
