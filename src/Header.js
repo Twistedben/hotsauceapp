@@ -41,6 +41,12 @@ class Header extends React.Component {
     }
     // const hotPepperIcon = <FontAwesomeIcon icon={faPepperHot} />
     render() {
+        const linkDrpDwn = {
+            color: "white",
+            backgroundColor: "DodgerBlue",
+            padding: "5px",
+            fontFamily: "Arial"
+        };
         // const hotPepperIcon = <FontAwesomeIcon icon={faPepperHot} />
         // const closedMenu = this.setState({ showMenu: false })
         return (
@@ -49,20 +55,20 @@ class Header extends React.Component {
                 {/* <div className="headerName sauceOnHeader">Sauce</div> */}
                 <nav className="dropDown" role="select">
                     <div className="btnsOnHeader">
-                        <MDBBtn rounded outline color="secondar"><a href="/#">Home</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondar"><a href="/#">HS Directory</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondar"><a href="/#">Profile</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondar"><a href="/#">Contact Us</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary"><a href="/#">Home</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary"><a href="/#">HS Directory</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary"><a href="/#">Profile</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary"><a href="/#">Contact Us</a></MDBBtn>
                         {/* <button id="homeBtn"><a href="/#">Home</a></button>
                         <button id="hsDirBtn"><a href="/#">HS Directory</a></button>
                         <button id="profileBtn"><a href="/#">Profile</a></button>
                         <button id="contactUsBtn"><a href="/#">Contact Us</a></button> */}
                     </div>
                     <div className="btnsOnMenuBtn">
-                        <MDBBtn rounded outline color="secondary" id="dropMenuBtn" onClick={this.showMenu}>
-                            <div className="btnPeppper">
-                                <MDBIcon icon="pepper-hot" size="2x" color="action" />
-                            </div>
+                        <MDBBtn rounded outline color="secondary" id="dropMenuBtn" style={{ padding: "5px" }} onClick={this.showMenu}>
+                            {/* <div className="btnPeppper"> */}
+                            <MDBIcon icon="pepper-hot" size="2x" color="action" />
+                            {/* </div> */}
                         </MDBBtn>
                         {/* <MDBIcon icon="tint" /> */}
                         {
@@ -73,7 +79,8 @@ class Header extends React.Component {
                                             this.dropdownMenu = element;
                                         }}
                                     >
-                                        <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">Home</a></MDBBtn>
+                                        {/* style={linkDrpDwn} */}
+                                        <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">Home</a></MDBBtn>
                                         <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">HS Directory</a></MDBBtn>
                                         <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">Profile</a></MDBBtn>
                                         <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">Contact Us</a></MDBBtn>
