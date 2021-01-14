@@ -1,8 +1,10 @@
 import React from 'react'
 import './Header.css'
 import './MainContent.css'
-import { MDBIcon } from 'mdbreact';
-import { MDBBtn } from "mdbreact";
+import { MDBIcon, MDBBtn } from 'mdbreact';
+// import { MDBBtn } from "mdbreact";
+// import { MDBAnimation } from "mdbreact";
+// import { MDBView } from
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faPepperHot } from '@fortawesome/free-solid-svg-icons'
@@ -42,23 +44,29 @@ class Header extends React.Component {
     // const hotPepperIcon = <FontAwesomeIcon icon={faPepperHot} />
     render() {
         const linkDrpDwn = {
+            width: "80px",
             color: "white",
             backgroundColor: "DodgerBlue",
             padding: "5px",
             fontFamily: "Arial"
         };
-        // const hotPepperIcon = <FontAwesomeIcon icon={faPepperHot} />
-        // const closedMenu = this.setState({ showMenu: false })
+        const btnsOnHeader = {
+            width: "90px",
+            color: "white",
+            backgroundColor: "DodgerBlue",
+            padding: "5px",
+            fontFamily: "Arial"
+        };
         return (
             <div className="Header">
                 <div className="headerName hotOnHeader">HotSauce</div>
                 {/* <div className="headerName sauceOnHeader">Sauce</div> */}
                 <nav className="dropDown" role="select">
                     <div className="btnsOnHeader">
-                        <MDBBtn rounded outline color="secondary"><a href="/#">Home</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondary"><a href="/#">HS Directory</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondary"><a href="/#">Profile</a></MDBBtn>
-                        <MDBBtn rounded outline color="secondary"><a href="/#">Contact Us</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary" style={btnsOnHeader}><a href="/#">Home</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary" style={btnsOnHeader}><a href="/#">HS Directory</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary" style={btnsOnHeader}><a href="/#">Profile</a></MDBBtn>
+                        <MDBBtn rounded outline color="secondary" style={btnsOnHeader}><a href="/#">Contact Us</a></MDBBtn>
                         {/* <button id="homeBtn"><a href="/#">Home</a></button>
                         <button id="hsDirBtn"><a href="/#">HS Directory</a></button>
                         <button id="profileBtn"><a href="/#">Profile</a></button>
@@ -80,10 +88,15 @@ class Header extends React.Component {
                                         }}
                                     >
                                         {/* style={linkDrpDwn} */}
+
+                                        {/* <MDBAnimation type="bounce" infinite hover> */}
                                         <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">Home</a></MDBBtn>
-                                        <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">HS Directory</a></MDBBtn>
-                                        <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">Profile</a></MDBBtn>
-                                        <MDBBtn rounded outline color="secondary" size="sm"><a href="/#">Contact Us</a></MDBBtn>
+                                        {/* </MDBAnimation> */}
+
+                                        {/* <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">Home</a></MDBBtn> */}
+                                        <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">HS Directory</a></MDBBtn>
+                                        <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">Profile</a></MDBBtn>
+                                        <MDBBtn rounded outline color="secondary" style={linkDrpDwn}><a href="/#">Contact Us</a></MDBBtn>
                                     </div>
                                 ) : (
                                     null

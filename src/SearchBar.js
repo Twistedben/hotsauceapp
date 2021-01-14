@@ -1,16 +1,16 @@
-import React from 'react'
-import './SearchBar.css'
-import './MainContent.css'
+import React from 'react';
 
-class SideBar extends React.Component {
-    render() {
-        return(
-            <div className="sideBarAndBtn">
-                (next step is search bar center and under Header Component)
-            </div>
-        )
-    }
+const SearchBar = ({ input: keyword, onChange: setKeyword }) => {
+    const BarStyling = { color: 'red', width: "20rem", background: "orange", border: "2px solid red", padding: "0.5rem", width: "auto" };
+    return (
+        <input
+            style={BarStyling}
+            key="random1"
+            value={keyword}
+            placeholder={"search country"}
+            onChange={(e) => setKeyword(e.target.value)}
+        />
+    );
 }
 
-export default SideBar
-
+export default SearchBar

@@ -4,7 +4,7 @@ form {
     flex-direction:row;
     align-self: flex-end;
     /* This bit draws the box around it */
-    border:1px solid grey;
+    border:1px solid rgb(243, 2, 2);
     /* I've used padding so you can see the edges of the elements. */
     padding:2px;
   }
