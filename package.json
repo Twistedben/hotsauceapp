@@ -1,5 +1,6 @@
 {
   "name": "hotsauceapp",
+  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^9.8.6",
+    "firebase": "^8.2.3",
     "json-server": "^0.16.3",
     "mdbreact": "^5.0.1",
     "postcss": "^7.0.35",
@@ -25,6 +27,7 @@
     "start": "craco start",
     "build": "craco build",
     "server": "json-server --watch db.json --port 5000",
+    "hotsauceapp": "npm start --prefix hotsauceapp",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
